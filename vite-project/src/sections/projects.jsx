@@ -1,26 +1,64 @@
-import { ExternalLink, Github, Clock } from "lucide-react";
+import { ExternalLink, Github, Clock, CheckCircle2 } from "lucide-react";
 
 const projects = [
   {
-    title: "Finance & Budgeting App",
+    title: "RoadSense: Accident Severity Predictor",
     description:
-      "A friendly finance and budgeting application designed to help freelancers, students, and educational institutions track and save their money. Features expense tracking, budget planning, and financial insights.",
+      "An end-to-end machine learning system that predicts the severity of US traffic accidents across 4 classes. Trained a Random Forest in Google Colab, using SMOTE to balance the classes and GridSearchCV to tune it, raising macro F1 from 0.25 to 0.30. A modular Flask backend with Blueprints serves the packaged models through a REST API, with a polished frontend on top.",
     image: "/hero.jpg",
-    stack: ["React.js", "Node.js", "Tailwind CSS", "JavaScript"],
+    stack: ["Python", "scikit-learn", "Random Forest", "SMOTE", "GridSearchCV", "Flask", "REST API", "Google Colab"],
     github: "https://github.com/Idhil686",
     live: null,
-    featured: true,
+    status: "Completed",
+  },
+  {
+    title: "USIU Lost & Found",
+    description:
+      "A full-stack platform where USIU-Africa students report and recover lost items. I led the team as Team Lead. Features secure login and signup with bcrypt and JWT, a lost/found reporting form, a live listings dashboard and a contact directory, going three features beyond the class specification.",
+    image: "/hero.jpg",
+    stack: ["React", "Vite", "Node.js", "Express.js", "MongoDB", "JWT", "bcrypt"],
+    github: "https://github.com/Idhil686/usiu-lost-and-found",
+    live: null,
+    status: "Completed",
+  },
+  {
+    title: "USIU Sports App",
+    description:
+      "A native Android app for USIU sports, with Basketball and Volleyball modules, player rosters and team-joining flows. Uses Firebase Authentication and Firestore with real-time roster updates. I debugged dependency conflicts and Firestore security rules to reach a stable, demo-ready build.",
+    image: "/hero.jpg",
+    stack: ["Java", "Android Studio", "Firebase Auth", "Firestore"],
+    github: "https://github.com/Idhil686",
+    live: null,
+    status: "Completed",
+  },
+  {
+    title: "Alzheimer's MRI Classifier & Student Grade Predictor",
+    description:
+      "Two deep learning models: a CNN that classifies stages of Alzheimer's disease from MRI scans, and a PyTorch neural network that predicts student academic outcomes. Each model is deployed behind its own Flask inference API.",
+    image: "/hero.jpg",
+    stack: ["Python", "TensorFlow/Keras", "PyTorch", "CNN", "Flask"],
+    github: "https://github.com/Idhil686",
+    live: null,
+    status: "Completed",
+  },
+  {
+    title: "Finance & Budgeting App",
+    description:
+      "A friendly finance and budgeting app to help freelancers, students and institutions track and save money, with expense tracking, budget planning and financial insights. Proposed and scoped for the ACN Makerspace.",
+    image: "/hero.jpg",
+    stack: ["React", "Node.js", "MongoDB", "Figma", "scikit-learn"],
+    github: "https://github.com/Idhil686",
+    live: null,
     status: "In Progress",
   },
   {
-    title: "Credit Card Fault Detection",
+    title: "Credit Card Fraud Detection",
     description:
-      "A machine learning project that collects and processes customer data to detect fraudulent credit card transactions, helping protect users from financial fraud.",
+      "A machine learning project that processes customer transaction data to detect fraudulent credit card transactions and protect users from financial fraud.",
     image: "/hero.jpg",
-    stack: ["Python", "Machine Learning", "Data Analysis"],
+    stack: ["Python", "scikit-learn", "pandas", "NumPy"],
     github: "https://github.com/Idhil686",
     live: null,
-    featured: true,
     status: "In Progress",
   },
 ];
@@ -35,10 +73,10 @@ export const Projects = () => {
             My Work
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-2">
-            Current <span className="text-primary">Projects</span>
+            My <span className="text-primary">Projects</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-xl">
-            These are my current projects. I'll be adding more as I complete them — stay tuned!
+            Full-stack web apps, Android apps and machine learning systems I've built, plus what I'm working on now.
           </p>
         </div>
 
@@ -65,7 +103,7 @@ export const Projects = () => {
               <div className="p-8 flex flex-col justify-center space-y-4">
                 {/* Status badge */}
                 <div className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-primary/10 text-primary text-xs rounded-full w-fit">
-                  <Clock size={10} />
+                  {project.status === "Completed" ? <CheckCircle2 size={10} /> : <Clock size={10} />}
                   {project.status}
                 </div>
 
@@ -113,7 +151,7 @@ export const Projects = () => {
         {/* Coming soon note */}
         <div className="mt-12 text-center glass rounded-2xl p-8">
           <p className="text-muted-foreground">
-            More projects coming soon —{" "}
+            See all my code —{" "}
             <a
               href="https://github.com/Idhil686"
               target="_blank"
@@ -121,8 +159,7 @@ export const Projects = () => {
               className="text-primary hover:underline"
             >
               follow me on GitHub
-            </a>{" "}
-            to stay updated!
+            </a>
           </p>
         </div>
       </div>

@@ -58,7 +58,7 @@ export const Hero = () => {
             <span className="text-primary">Idhil</span>
             <br />
             <span className="text-foreground/80 text-4xl md:text-5xl font-medium">
-              Software Developer
+              Full-Stack Developer
             </span>
           </h1>
 
@@ -67,9 +67,9 @@ export const Hero = () => {
             className="text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed animate-fade-in"
             style={{ animationDelay: "0.2s" }}
           >
-            Computer Science student at USIU-Africa passionate about building
-            meaningful software. Currently working on a Finance & Budgeting App
-            and a Credit Card Fault Detection project.
+           I'm a Computer Science student at USIU-Africa who builds full-stack web
+          apps, Android apps and machine learning systems. I'm currently looking
+          for software engineering internships.      
           </p>
 
           {/* CTA Buttons */}

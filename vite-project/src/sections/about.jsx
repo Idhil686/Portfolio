@@ -1,20 +1,24 @@
 import { Code2, GraduationCap, Lightbulb, Rocket } from "lucide-react";
 
-const skills = [
-  "Python", "Java", "JavaScript", "React.js",
-  "Node.js", "Tailwind CSS", "C++", "HTML/CSS",
+const skillGroups = [
+  { title: "Languages", items: ["Python", "JavaScript", "Java", "SQL", "Prolog", "C++", "HTML/CSS"] },
+  { title: "Web & Mobile", items: ["React", "Vite", "Node.js", "Express.js", "Flask", "Tailwind CSS", "Android (Java)", "Android Studio", "Firebase"] },
+  { title: "Machine Learning", items: ["scikit-learn", "TensorFlow/Keras", "PyTorch", "NumPy", "pandas", "GridSearchCV", "SMOTE"] },
+  { title: "Data & Backend", items: ["MongoDB", "Mongoose", "REST APIs", "JWT & bcrypt Authentication"] },
+  { title: "Cloud & DevOps", items: ["AWS", "Google Cloud Platform", "Docker", "CI/CD Pipelines", "Terraform", "Ansible"] },
+  { title: "Tools", items: ["Git", "GitHub", "VS Code", "Google Colab", "Figma", "Postman", "Node-RED"] },
 ];
 
 const stats = [
   { value: "3rd", label: "Year Student" },
-  { value: "2+", label: "Projects Built" },
-  { value: "8+", label: "Technologies" },
+  { value: "6", label: "Projects" },
+  { value: "40+", label: "Technologies" },
   { value: "USIU", label: "Africa" },
 ];
 
 const traits = [
-  { icon: GraduationCap, title: "Student", desc: "3rd year Applied Computer Technology student at USIU-Africa." },
-  { icon: Code2, title: "Developer", desc: "Building real-world projects with modern web technologies." },
+  { icon: GraduationCap, title: "Student", desc: "3rd year Computer Science student at USIU-Africa." },
+  { icon: Code2, title: "Developer", desc: "Full-stack web, Android and machine learning projects." },
   { icon: Lightbulb, title: "Problem Solver", desc: "I enjoy breaking down complex problems into simple solutions." },
   { icon: Rocket, title: "Fast Learner", desc: "Always exploring new technologies and frameworks." },
 ];
@@ -60,17 +64,20 @@ export const About = () => {
           <div className="space-y-8">
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p className="text-lg">
-                Hello! I'm Idhil Hassan, a Computer Science student interested in
-                software development and technology. I enjoy building projects that
-                help me strengthen my programming and web development skills.
+                Hello! I'm Idhil Hassan, a Computer Science student with hands-on
+                experience in full-stack web development, machine learning and
+                Android engineering. I enjoy learning new technologies and working
+                with others to solve problems and deliver projects.
               </p>
               <p>
-                Through platforms like GitHub, I share my work and continuously
-                learn new tools and technologies. My goal is to grow as a developer
-                while contributing to meaningful and innovative solutions.
+                I've built an accident-severity predictor with scikit-learn and Flask,
+                led a team shipping a MERN Lost & Found platform, built an Android
+                sports app with Firebase, and trained deep learning models in
+                TensorFlow and PyTorch. I've also supported students and staff as
+                an ICT Support Assistant at the university.
               </p>
               <p>
-                Currently pursuing a degree in Applied Computer Technology at
+                Currently pursuing a BSc in Computer Science (Software Engineering) at
                 United States International University Africa (USIU-Africa) in
                 Nairobi, Kenya.
               </p>
@@ -94,14 +101,21 @@ export const About = () => {
               <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-4">
                 Tech Stack
               </h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1.5 glass rounded-full text-sm text-muted-foreground hover:text-primary hover:border-primary/40 transition-all duration-200"
-                  >
-                    {skill}
-                  </span>
+              <div className="space-y-4">
+                {skillGroups.map(({ title, items }) => (
+                  <div key={title}>
+                    <div className="text-xs text-primary font-medium mb-2">{title}</div>
+                    <div className="flex flex-wrap gap-2">
+                      {items.map((skill) => (
+                        <span
+                          key={skill}
+                          className="px-3 py-1.5 glass rounded-full text-sm text-muted-foreground hover:text-primary hover:border-primary/40 transition-all duration-200"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>

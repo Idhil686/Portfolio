@@ -1,30 +1,66 @@
 const experiences = [
   {
-    role: "Applied Computer Technology Student",
-    company: "USIU-Africa",
-    period: "2024 — Present",
-    type: "Full-time",
+    role: "ICT Support Assistant",
+    company: "USIU-Africa, Nairobi",
+    period: "University",
+    type: "Work Experience",
     description:
-      "Pursuing a Bachelor's degree in Applied Computer Technology at United States International University Africa. Building strong foundations in software development, algorithms, data structures, and modern web technologies.",
-    stack: ["Python", "Java", "C++", "JavaScript"],
+      "Helped students and staff with everyday ICT questions, explaining solutions clearly and working with others to resolve issues. Adapted quickly to new tools and requests while giving approachable support to university users.",
+    stack: ["IT Support", "Troubleshooting", "Communication"],
   },
   {
-    role: "Finance & Budgeting App",
-    company: "Personal Project",
-    period: "2024 — Present",
-    type: "In Progress",
+    role: "Team Lead, Lost & Found Platform",
+    company: "Collaborative Software Development, USIU-Africa",
+    period: "2026",
+    type: "Leadership",
     description:
-      "Building a friendly finance and budgeting application that helps freelancers, students, and educational institutions manage and save their money effectively through an intuitive interface.",
-    stack: ["React.js", "Node.js", "Tailwind CSS", "JavaScript"],
+      "Led a team to design and ship a full-stack lost-and-found platform with React (Vite), Express.js and MongoDB. Implemented secure bcrypt and JWT authentication with a dual-mode login/signup flow, and built item reporting, a live listings dashboard and a contact directory, three features beyond the class specification. Coordinated feature delivery and represented the team in the project's contact documentation.",
+    stack: ["React", "Express.js", "MongoDB", "JWT", "bcrypt", "Team Leadership"],
   },
   {
-    role: "Credit Card Fault Detection",
-    company: "Personal Project",
-    period: "2024 — Present",
-    type: "In Progress",
+    role: "RoadSense: Accident Severity Predictor",
+    company: "Applied Machine Learning Coursework",
+    period: "2026",
+    type: "Project",
     description:
-      "Developing a credit card fault detection system that collects and processes customer data to identify fraudulent transactions and protect users from financial fraud.",
-    stack: ["Python", "Machine Learning", "Data Analysis"],
+      "Built an end-to-end ML system predicting 4-class US traffic accident severity with a Random Forest, trained in Google Colab using SMOTE and GridSearchCV. Engineered a modular Flask backend (config, services, Blueprint routes, utils, tests) serving four model artifacts through a REST API. Improved macro F1 from 0.25 to 0.30, identified temperature, humidity and wind speed as top predictors, and delivered a frontend plus a timed technical presentation.",
+    stack: ["scikit-learn", "SMOTE", "GridSearchCV", "Flask", "Google Colab"],
+  },
+  {
+    role: "USIU Sports App",
+    company: "Android Mobile Development",
+    period: "2026",
+    type: "Project",
+    description:
+      "Developed a native Android app in Java with Firebase Authentication and Firestore, including real-time roster updates via addSnapshotListener. Designed Basketball and Volleyball modules with player rosters and team-joining flows, debugged dependency conflicts and Firestore security rules to reach a stable build, and presented it in a recorded walkthrough for lecturer assessment.",
+    stack: ["Java", "Android Studio", "Firebase", "Firestore"],
+  },
+  {
+    role: "Alzheimer's MRI Classifier & Student Grade Predictor",
+    company: "Deep Learning",
+    period: "2026",
+    type: "Project",
+    description:
+      "Trained a CNN to classify Alzheimer's stages from MRI scans and a separate PyTorch feedforward network to predict student academic outcomes, each deployed behind a Flask inference API.",
+    stack: ["TensorFlow/Keras", "PyTorch", "CNN", "Flask"],
+  },
+  {
+    role: "Applicant, ACN Makerspace",
+    company: "ACN Makerspace",
+    period: "2026",
+    type: "Activity",
+    description:
+      "Proposed and scoped a personal finance and budgeting mobile app, drawing on Figma, PyTorch, scikit-learn and the MERN stack, and highlighted a track record of leading collaborative technical work.",
+    stack: ["Figma", "PyTorch", "scikit-learn", "MERN Stack"],
+  },
+  {
+    role: "BSc Computer Science (Software Engineering)",
+    company: "United States International University-Africa",
+    period: "In Progress",
+    type: "Education",
+    description:
+      "Relevant coursework: Applied Machine Learning, Collaborative Software Development, Cloud Computing and Android Mobile Development, covering search and CSP algorithms, Bayesian networks, Minimax with alpha-beta pruning, version control strategy, Agile/DevOps, CI/CD and Infrastructure-as-Code.",
+    stack: ["Machine Learning", "Cloud Computing", "Android", "Agile/DevOps", "CI/CD", "IaC"],
   },
 ];
 
